@@ -79,10 +79,10 @@ def detect_and_predict_mask(frame, faceNet, maskNet):
 def send_message(name):
     return requests.post(
         "https://api.mailgun.net/v3/sandboxeca3ec8512864d7396d8e896a0217ec9.mailgun.org/messages",
-        auth=("api", "4c33a7caef7af745ab2a23d55da7dabe-2af183ba-9011c821"),
+        auth=("api", ""),
         files = [("attachment", ("image.jpg", open("image.jpg", "rb").read()))],
         data={"from": 'hello@example.com',
-            "to": ["srfrter133@gmail.com"],
+            "to": [""],
             "subject": "Face Identified!!",
             "html": "<html>" + name + " is identified.  </html>"})
 
